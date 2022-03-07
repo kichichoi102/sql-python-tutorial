@@ -1,6 +1,9 @@
 import os
 import pyodbc
 import traceback
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Connection:
     """Connection
@@ -73,11 +76,12 @@ class Connection:
         ----------
         pyodbc/Connection
         """
+
         try:
             connection = pyodbc.connect(self._build_connection_string())
         except:
-            # Connection Error catch
-            return traceback.format_exec()
+            print(traceback.format_exc())
+            return traceback.format_exc()
         
         return connection
 
