@@ -104,8 +104,10 @@ class Connection:
         """
         output = ""
 
-        # Add DSN
-        output += 'DSN='+self.dsn+';'
+        # Add Driver
+        output += 'DRIVER='+self.driver+';'
+        # Add Server
+        output += 'SERVER='+self.serverName+';'
         # Add DatabaseName
         output += 'DATABASE='+self.databaseName+';'
         #Add Username
