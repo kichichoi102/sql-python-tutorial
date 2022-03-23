@@ -113,6 +113,7 @@ class Connection:
         #Add Username
         output += 'UID='+self.dbUserName+';'
         #Add Password
-        output += 'PWD='+self.dbPassword
+        output += 'PWD='+self.dbPassword + ';'
+        output += 'Trusted_Connection=yes;'
 
         return output
